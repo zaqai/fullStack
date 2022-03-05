@@ -4,7 +4,7 @@
 
 ## 后端
 
-> 使用Spring Boot+MyBatis+MVC
+> 使用Spring Boot+MyBatis+Maven
 
 
 
