@@ -7,19 +7,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 @CrossOrigin
 @RestController
-@RequestMapping(value = "/do/user")
+@RequestMapping(value = "/user")
 public class UserController {
     @Autowired
 
     private UserService userService;
+
     @CrossOrigin
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public boolean addUser(@RequestBody User user) {
         System.out.println("新增数据：");
         return userService.addUser(user);
     }
+
     @CrossOrigin
     @RequestMapping(value = "/update", method = RequestMethod.POST)
     public boolean updateUser(@RequestBody User user) {
@@ -34,22 +37,18 @@ public class UserController {
     }
 
 
-    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    @RequestMapping(value = "/find", method = RequestMethod.GET)
     public User findByUserName(@RequestParam(value = "username", required = true) String username) {
         System.out.println("查询数据：");
         return userService.findUserByName(username);
     }
 
     @CrossOrigin
-    @RequestMapping(value = "/userAll", method = RequestMethod.GET)
+    @RequestMapping(value = "/findAll", method = RequestMethod.GET)
     public List<User> findByUserAge() {
         System.out.println("查询所有数据:");
         return userService.findAll();
     }
-    @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public boolean loginUser(@RequestBody User user) {
-        System.out.println("login：");
-        return userService.addUser(user);
-    }
+
 
 }

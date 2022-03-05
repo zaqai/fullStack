@@ -1,8 +1,41 @@
 # 后端
 
-连接数据库，提供给前端接口(更新 添加 查找 查找所有 删除)
+> 使用Spring Boot+MyBatis+MVC
+
+
+
+>默认端口8090, 可在配置文件中修改
+>
+>数据库运行在服务器上, 可直接使用
+## 接口
+
+- 查询所有用户(get): 127.0.0.1:8090/user/findAll
+
+  ![image-20220305110949913](https://oss.zaqai.com/img/image-20220305110949913.png)
+
+- 根据用户名查找用户(get): 127.0.0.1:8090/user/find?username=XX
+
+  ![image-20220305110848942](https://oss.zaqai.com/img/image-20220305110848942.png)
+
+- 根据id删除用户(get): 127.0.0.1:8090/user/delete?id=XX
+
+  ![image-20220305110931761](https://oss.zaqai.com/img/image-20220305110931761.png)
+
+- 根据id修改用户(post): 127.0.0.1:8090/user/update
+
+  ![image-20220305110616524](https://oss.zaqai.com/img/image-20220305110616524.png)
+
+- 添加用户(post): 127.0.0.1:8090/user/add
+
+  ![image-20220305110539064](https://oss.zaqai.com/img/image-20220305110539064.png)
+
+
 
 # 前端
+
+> 使用Vue+Element UI
+
+
 
 `npm install`
 
@@ -10,23 +43,18 @@
 
 # 效果截图
 
-![](https://ftp.bmp.ovh/imgs/2021/09/0354a04f14c0ec23.png)
+![image-20220305111326679](https://oss.zaqai.com/img/image-20220305111326679.png)
 
 ## 删除操作
 
-![](https://ftp.bmp.ovh/imgs/2021/09/7a0ce7e7ebed095b.png)
+![image-20220305111355975](https://oss.zaqai.com/img/image-20220305111355975.png)
 
 ## 修改操作
 
-> 前端尚未完全实现，但后端接口是好用的，postman测试如下
-
-![](https://ftp.bmp.ovh/imgs/2021/09/8d9d24171f617a2c.png)
 
 
+![image-20220305111425629](https://oss.zaqai.com/img/image-20220305111425629.png)
 
-## 新增操作
 
-> 前端尚未完全实现，但后端接口是好用的，postman测试如下
 
-![](https://ftp.bmp.ovh/imgs/2021/09/b843c12637f34586.png)
 

@@ -14,11 +14,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean addUser(User user) {
-        boolean flag=false;
-        try{
+        boolean flag = false;
+        try {
             userDao.addUser(user);
-            flag=true;
-        }catch(Exception e){
+            flag = true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return flag;
@@ -26,11 +26,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean updateUser(User user) {
-        boolean flag=false;
-        try{
+        boolean flag = false;
+        try {
             userDao.updateUser(user);
-            flag=true;
-        }catch(Exception e){
+            flag = true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return flag;
@@ -38,11 +38,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteUser(int id) {
-        boolean flag=false;
-        try{
+        boolean flag = false;
+        try {
             userDao.deleteUser(id);
-            flag=true;
-        }catch(Exception e){
+            flag = true;
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return flag;
@@ -57,10 +57,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> findAll() {
         return userDao.findAll();
-    }
-    @Override
-    public boolean loginUser(String username,String password) {
-        return userDao.loginUser( username, password);
     }
 
 
